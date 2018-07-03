@@ -1,0 +1,26 @@
+{
+  "name": "purescript-partial-semigroup",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.0.1",
+    "purescript-console": "^4.1.0",
+    "purescript-effect": "^2.0.0",
+    "purescript-arrays": "^5.0.0",
+    "purescript-generics-rep": "^6.0.0",
+    "purescript-lists": "^5.0.0",
+    "purescript-maybe": "^4.0.0",
+    "purescript-identity": "^4.0.0",
+    "purescript-tuples": "^5.0.0",
+    "purescript-either": "^4.0.0",
+    "purescript-newtype": "^3.0.0",
+    "purescript-lazy": "^4.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0"
+  }
+}
