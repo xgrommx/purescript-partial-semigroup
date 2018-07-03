@@ -13,6 +13,7 @@ import Data.List as L
 import Data.List.Lazy as LL
 import Data.List.Lazy.NonEmpty as NELL
 import Data.List.NonEmpty as NEL
+import Data.List.ZipList (ZipList(..))
 import Data.Maybe (Maybe(..), maybe)
 import Data.Monoid.Additive (Additive)
 import Data.Monoid.Multiplicative (Multiplicative)
@@ -57,8 +58,8 @@ instance partialSemigroupEither :: (PartialSemigroup a, PartialSemigroup b) => P
 instance partialSemigroupTuple :: (PartialSemigroup a, PartialSemigroup b) => PartialSemigroup (Tuple a b) where
   pappend (Tuple a b) (Tuple a' b') = Tuple <$> (a <>? a') <*> (b <>? b')
 
--- instance partialSemigroupZipList :: PartialSemigroup a => PartialSemigroup (ZipList a) where
---   pappend (ZipList x) (ZipList y) = ZipList <$> partialZipLazyList x y
+instance partialSemigroupZipList :: PartialSemigroup a => PartialSemigroup (ZipList a) where
+  pappend (ZipList x) (ZipList y) = ZipList <$> partialZipLazyList x y
 
 newtype Partial a = Partial (Maybe a)
 
